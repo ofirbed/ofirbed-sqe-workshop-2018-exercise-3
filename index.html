@@ -1,62 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
 
-        <style>
-            table {
-                width: 100%;
-                height: 100%;
-            }
+    <style>
+        #textArea  {
+            width: 100%;
+            height: 100%;
+        }
 
-            .textAreaWrapper {
-                width: 100%;
-                height: 80vh;
-            }
 
-            textarea {
-                width: 80%;
-                height: 95%;
-            }
-        </style>
-    </head>
-    <body>
-        <table>
-            <tr>
-                <td>
-                    <div>
-                        <label>Enter code here</label>
-                    </div>
-                </td>
-                <td>
-                    <div>
-                        <label>Parsed code here</label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="textAreaWrapper">
-                        <textarea id="codePlaceholder" title="Enter code here"></textarea>
-                    </div>
-                </td>
-                <td>
-                    <div class="textAreaWrapper">
-                        <textarea id="parsedCode" title="Parse code"></textarea>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div>
-                        <button id="codeSubmissionButton">Parse code</button>
-                    </div>
-                </td>
-                <td>
-                </td>
-            </tr>
-        </table>
+        .head{
+            background: beige;
 
-        <script src="dist/bundle.js"></script>
-    </body>
+        }
+        .output {
+            border:  2px solid black;
+            width: 150px;
+            height: 20px;
+        }
+
+        .g {
+            background-color: green;
+        }
+
+        .r {
+            background-color: red;
+        }
+
+
+
+        .textAreaWrapper {
+            width: 100%;
+            height: 65vh;
+        }
+
+        textarea {
+            width: 80%;
+            height: 95%;
+        }
+    </style>
+</head>
+<body>
+<table id="textArea">
+    <tr>
+        <td>
+            <div>
+                <label>Enter code here</label>
+            </div>
+        </td>
+        <td>
+            <div>
+                <label>Input Vector here in the format: arg1,arg2,arg3... (For example:  1,2,3)</label>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="textAreaWrapper">
+                <textarea id="codePlaceholder" title="Enter code here"></textarea>
+            </div>
+        </td>
+        <td>
+            <div class="textAreaWrapper">
+                <textarea id="InputVector" title="Parse code"></textarea>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div>
+                <button id="codeSubmissionButton">Parse code</button>
+            </div>
+        </td>
+        <td>
+        </td>
+    </tr>
+</table>
+
+<div id="diagram"></div>
+</div>
+
+
+<script src="dist/bundle.js"></script>
+</body>
 </html>
+
